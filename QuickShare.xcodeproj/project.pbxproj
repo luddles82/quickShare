@@ -14,6 +14,7 @@
 		CD70824B1B21E2D800CDD1A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD70824A1B21E2D800CDD1A0 /* Images.xcassets */; };
 		CD70824E1B21E2D800CDD1A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD70824C1B21E2D800CDD1A0 /* LaunchScreen.xib */; };
 		CD70825A1B21E2D800CDD1A0 /* QuickShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7082591B21E2D800CDD1A0 /* QuickShareTests.swift */; };
+		CD7082641B21E2F900CDD1A0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7082631B21E2F900CDD1A0 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		CD7082531B21E2D800CDD1A0 /* QuickShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7082581B21E2D800CDD1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7082591B21E2D800CDD1A0 /* QuickShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickShareTests.swift; sourceTree = "<group>"; };
+		CD7082631B21E2F900CDD1A0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7082641B21E2F900CDD1A0 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		CD7082331B21E2D800CDD1A0 = {
 			isa = PBXGroup;
 			children = (
+				CD7082631B21E2F900CDD1A0 /* Social.framework */,
 				CD70823E1B21E2D800CDD1A0 /* QuickShare */,
 				CD7082561B21E2D800CDD1A0 /* QuickShareTests */,
 				CD70823D1B21E2D800CDD1A0 /* Products */,

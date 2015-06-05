@@ -7,9 +7,55 @@
 //
 
 import UIKit
+import Social
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func cameraTapped(sender: AnyObject) {
+        
+        var imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        if UIImagePickerController.isSourceTypeAvailable(.Camera){
+            
+            imagePickerController.sourceType = .Camera
+            
+        }else{
+            
+            imagePickerController.sourceType = .PhotoLibrary
+        }
+        
+        self.presentViewController(imagePickerController, animated: true, completion: nil)
+
+    }
+    
+    
+    @IBAction func shareTapped(sender: AnyObject) {
+        
+        if imageView.image != nil {
+            
+            var twitter = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            twitter.addImage(imageView.image)
+            
+            self.presentViewController(twitter, animated: true, completion: nil)
+            
+        }else{
+            
+            println("no image selected to share on Twitter")
+            
+        }
+
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        
+        imageView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
